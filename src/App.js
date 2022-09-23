@@ -1,20 +1,14 @@
-import { Heading, VStack, IconButton, Spacer } from "@chakra-ui/react";
+import { Heading, VStack, IconButton, Spacer, useColorMode } from "@chakra-ui/react";
 import AddTodo from "./components/AddTodo";
 import TodoList from "./components/TodoLisrt";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 function App() {
-  //Dummy Data
-  const initialTodos = [
-    { id: 1, text: "do project" },
-    { id: 2, text: "deploy project" },
-  ];
-
   //State
   const [todos, setTodos] = useState(
-  () => JSON.parse(localStorage.getItem('todos'))||[]
-  // initialTodos
+    () => JSON.parse(localStorage.getItem("todos")) || []
+    // initialTodos
   );
 
   useEffect(() => {
@@ -34,14 +28,18 @@ function App() {
     setTodos([...todos, todo]);
   };
 
+  //Change the color theme
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <VStack p={4}>
       {/* Icne Button */}
       <IconButton
-        icon={<FaSun />}
+        icon={colorMode === 'light'?<FaMoon/>:<FaSun />}
         isRound="true"
         size="lg"
         alignSelf="flex-end"
+        onClick={toggleColorMode}
       />
 
       {/* Heading */}

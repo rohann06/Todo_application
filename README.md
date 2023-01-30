@@ -1,4 +1,4 @@
-# Todo Applycation
+# Todo Applycation 📝
  #### This is a to-do application in which users can add and delete tasks, and also can change the theme of the application.
  #### The intension behind this project was to learn styling using chakraUI and framer-motion.
  

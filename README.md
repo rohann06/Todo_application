@@ -17,7 +17,9 @@ I've used local storage to store and delete tasks.
 
 There is only 1 page in the application
 
-#### User can add the task and delete it by clicking the bin button and by clicking on button at topright corner user can change dark or light theam.
+User can add the task and delete it by clicking the bin button and by clicking on button at topright corner user can change dark or light theam.
+
+the website is fully responsive
 
 ![Todo_project_image](https://user-images.githubusercontent.com/75326769/215538094-3c563a2d-fa6f-4268-be48-d5fb3670f0d4.png)
 
